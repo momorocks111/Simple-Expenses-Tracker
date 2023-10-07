@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/images/icons8-transaction-list-16.png"
+    />
+    <title>Expenses Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="app__title">
+        <h2 class="title">Expense Tracker</h2>
+      </div>
+    </header>
+    <main>
+      <section class="tracker__app">
+        <div class="user__form">
+          <form id="expense-form">
+            <label for="expense-name">Expense Name:</label>
+            <input type="text" id="expense-name" name="expense-name" required />
+            <label for="expense-amount">Expense Amount:</label>
+            <input
+              type="number"
+              id="expense-amount"
+              name="expense-amount"
+              required
+            />
+            <label for="expense-date">Expense Date:</label>
+            <input type="date" id="expense-date" name="expense-date" required />
+            <button type="submit">Add Expense</button>
+          </form>
+        </div>
+
+        <div class="transactions">
+          <table>
+            <thead>
+              <tr>
+                <th>Expense Name</th>
+                <th>Expense Amount</th>
+                <th>Expense Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="expense-list"></tbody>
+          </table>
+        </div>
+
+        <div class="total">
+          <h3>Total Expenses:</h3>
+          <p id="total-amount">$0.00</p>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
